@@ -1,7 +1,7 @@
 #include "stack.hpp"
 #include <stack>
 
-using namesapce std;
+using namespace std;
 
 int main(){
     Stack stk;
