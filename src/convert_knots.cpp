@@ -1,0 +1,10 @@
+#include "convert_knots.hpp"
+#include <iostream>
+using namespace std; 
+
+int main(){
+    int knots  = 0;
+    cout << "Enter knots: ";
+    cin >> knots;
+    cout << knots << " knots is " << knots_to_miles_per_minute(knots) << " miles per minute" << endl;
+}
