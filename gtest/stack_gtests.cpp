@@ -54,9 +54,38 @@ TEST(Stack, PopAll) {
   testing::internal::CaptureStdout();
   pop_all(st);
   std::string output = testing::internal::GetCapturedStdout();
+  EXPECT_EQ("hsup\n", output);
+  EXPECT_TRUE(st.isEmpty());
 }
 
 // ADD YOUR TESTS HERE:
 
+TEST(Stack, PopEmpty){
+    Stack st;
+    EXPECT_EQ('@', st.pop());
+}
+
+TEST(Stack, TopEmpty){
+    Stack st;
+    EXPECT_EQ('@', st.top());
+}
+
+TEST(Stack, OneChar){
+    Stack st;
+    st.push('x');
+    EXPECT_EQ('x', st.top());
+    EXPECT_EQ('x', st.pop());
+    EXPECT_TRUE(st.isEmpty());
+}
+
+TEST(Stack, Full){
+    Stack st;
+    for(int i = 0; i<STK_MAX; ++i){
+        st.push('a');
+    }
+    EXPECT_TRUE(st.isFull);
+    st.push('b');
+    EXPECT_EQ('a', st.pop());
+}
 
 } // anonymous namespace
