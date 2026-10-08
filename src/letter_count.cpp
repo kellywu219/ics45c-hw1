@@ -2,6 +2,11 @@
 using namespace std;
 
 int main(){
-    int count[N_CHARS] = {0};
-    
+    int counts[N_CHARS] = {0};
+    string line;
+    while(getline(cin, line)){
+        count(line, counts);
+    }
+    print_counts(counts, N_CHARS);
+    return 0;
 }

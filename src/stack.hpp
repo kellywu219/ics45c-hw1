@@ -50,7 +50,7 @@ void push_all(Stack& stk, std::string line){
 }
 void pop_all(Stack& stk){
     while(!stk.isEmpty()){
-        std::cout<<std::stk.pop();
+        std::cout<<stk.pop();
     }
     std::cout << std::endl;
 }
