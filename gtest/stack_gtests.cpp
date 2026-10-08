@@ -83,7 +83,7 @@ TEST(Stack, Full){
     for(int i = 0; i<STK_MAX; ++i){
         st.push('a');
     }
-    EXPECT_TRUE(st.isFull);
+    EXPECT_TRUE(st.isFull());
     st.push('b');
     EXPECT_EQ('a', st.pop());
 }
